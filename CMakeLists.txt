@@ -342,11 +342,6 @@ include(vtkDetermineCompilerFlags)
 
 # Tell VTK source files they are being built inside VTK.
 add_definitions(-DVTK_IN_VTK)
-# Enable parallel building in Visual Studio
-string (FIND ${CMAKE_GENERATOR} "Visual Studio" VISUAL_STUDIO_FOUND)
-if (NOT "${VISUAL_STUDIO_FOUND}" STREQUAL "-1")
-    add_definitions(-MP)
-endif()
 #-----------------------------------------------------------------------------
 if(BUILD_TESTING)
   include(vtkLegacyData)

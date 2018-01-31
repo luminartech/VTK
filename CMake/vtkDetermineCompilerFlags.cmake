@@ -120,7 +120,7 @@ ENDIF()
 
 # Enable /MP flag for Visual Studio 2008 and greator
 IF(MSVC_VERSION GREATER 1400)
-  SET(CMAKE_CXX_MP_FLAG OFF CACHE BOOL "Build with /MP flag enabled")
+  SET(CMAKE_CXX_MP_FLAG ON CACHE BOOL "Build with /MP flag enabled")
   SET(PROCESSOR_COUNT "$ENV{NUMBER_OF_PROCESSORS}")
   SET(CMAKE_CXX_MP_NUM_PROCESSORS CACHE ${PROCESSOR_COUNT} "The maximum number of processes for the /MP flag")
   IF (CMAKE_CXX_MP_FLAG)
